@@ -1,4 +1,3 @@
-version: '3.9'
 
 services:
   database:
@@ -10,14 +9,14 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - ./database:/docker-entrypoint-initdb.d
+      - ./database:/docker-entrypoint-initdb.d  
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U admin"]
       interval: 5s
       retries: 10
 
   account-service:
-    build: ./services/account-service
+    build: ./services/account-service/Account
     ports:
       - "8081:8080"
     environment:
@@ -28,7 +27,7 @@ services:
       - database
 
   customer-service:
-    build: ./services/customer-service
+    build: ./services/customer-service/customer-service
     ports:
       - "8082:8080"
     environment:
@@ -39,7 +38,7 @@ services:
       - database
 
   card-service:
-    build: ./services/card-service
+    build: ./services/card-service/card-service
     ports:
       - "8083:8080"
     environment:
@@ -50,7 +49,7 @@ services:
       - database
 
   ledger-service:
-    build: ./services/ledger-service
+    build: ./services/ledger-service/ledger-service
     ports:
       - "8084:8080"
     environment:
@@ -61,7 +60,7 @@ services:
       - database
 
   notification-service:
-    build: ./services/notification-service
+    build: ./services/notification-service/notification-service
     ports:
       - "8085:8080"
     environment:
@@ -72,7 +71,7 @@ services:
       - database
 
   reporting-service:
-    build: ./services/reporting-service
+    build: ./services/reporting-service/reporting-service
     ports:
       - "8086:8080"
     environment:
@@ -83,7 +82,7 @@ services:
       - database
 
   loan-service:
-    build: ./services/loan-service
+    build: ./services/loan-service/loan-service
     ports:
       - "8087:8080"
     environment:
@@ -94,7 +93,7 @@ services:
       - database
 
   transaction-service:
-    build: ./services/transaction-service
+    build: ./services/transaction-service/transaction-service
     ports:
       - "8088:8080"
     environment:
@@ -105,7 +104,7 @@ services:
       - database
 
   bank-api-gateway:
-    build: ./bank-api-gateway
+    build: ./bank-api-gateway/gateway
     ports:
       - "8089:8080"
     depends_on:
