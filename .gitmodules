@@ -22,3 +22,6 @@
 [submodule "services/reporting-service"]
 	path = services/reporting-service
 	url = https://github.com/flanux/-ms-reporting-service
+[submodule "bank-api-gateway/gateway"]
+	path = bank-api-gateway/gateway
+	url = https://github.com/flanux/-bank-api-gateway
