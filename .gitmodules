@@ -1,0 +1,24 @@
+[submodule "services/customer-service"]
+	path = services/customer-service
+	url = https://github.com/flanux/-ms-customer-service
+[submodule "services/account-service"]
+	path = services/account-service
+	url = https://github.com/flanux/-ms-account-service
+[submodule "services/transaction-service"]
+	path = services/transaction-service
+	url = https://github.com/flanux/-ms-transaction-service
+[submodule "services/notification-service"]
+	path = services/notification-service
+	url = https://github.com/flanux/-ms-notification-service
+[submodule "services/card-service"]
+	path = services/card-service
+	url = https://github.com/flanux/-ms-card-service
+[submodule "services/ledger-service"]
+	path = services/ledger-service
+	url = https://github.com/flanux/-ms-ledger-service
+[submodule "services/loan-service"]
+	path = services/loan-service
+	url = https://github.com/flanux/-ms-loan-service
+[submodule "services/reporting-service"]
+	path = services/reporting-service
+	url = https://github.com/flanux/-ms-reporting-service
