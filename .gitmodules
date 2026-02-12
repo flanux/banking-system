@@ -26,5 +26,5 @@
 	path = bank-api-gateway/gateway
 	url = https://github.com/flanux/-bank-api-gateway
 [submodule "frontends/customer-portal"]
-	path = frontends/customer-portal
-	url = https://github.com/flanux/-bank-customer-portal
+    path = frontends/customer-portal
+    url = git@github.com:flanux/-bank-customer-portal.git
